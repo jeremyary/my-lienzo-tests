@@ -24,7 +24,6 @@ import com.google.gwt.core.client.GWT;
 import com.google.gwt.event.dom.client.ClickEvent;
 import com.google.gwt.event.dom.client.ClickHandler;
 import com.google.gwt.user.client.ui.Button;
-import com.google.gwt.user.client.ui.FlowPanel;
 import com.google.gwt.user.client.ui.Panel;
 
 import static com.ait.lienzo.client.core.shape.wires.LayoutContainer.Layout.BOTTOM;
@@ -33,7 +32,7 @@ import static com.ait.lienzo.client.core.shape.wires.LayoutContainer.Layout.LEFT
 import static com.ait.lienzo.client.core.shape.wires.LayoutContainer.Layout.RIGHT;
 import static com.ait.lienzo.client.core.shape.wires.LayoutContainer.Layout.TOP;
 
-public class TextWrapTests extends FlowPanel implements MyLienzoTest, HasButtons {
+public class TextWrapTests extends MyLienzoTest implements HasButtons {
 
     private static final double SIZE = 100;
 
@@ -42,7 +41,7 @@ public class TextWrapTests extends FlowPanel implements MyLienzoTest, HasButtons
     private Text text;
     private Layer layer;
 
-    public void test( final Layer layer ) {
+    public void test(final Layer layer ) {
         this.layer = layer;
         wires_manager = WiresManager.get( layer );
 
@@ -248,10 +247,5 @@ public class TextWrapTests extends FlowPanel implements MyLienzoTest, HasButtons
 
     private WiresShape bottom() {
         return create( "#CCCC00", SIZE, BOTTOM );
-    }
-
-    @Override
-    public int compareTo(MyLienzoTest other) {
-        return this.getClass().getSimpleName().compareTo(other.getClass().getSimpleName());
     }
 }

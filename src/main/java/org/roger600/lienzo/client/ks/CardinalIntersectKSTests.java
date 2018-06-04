@@ -15,7 +15,7 @@ import com.ait.lienzo.client.core.util.Geometry;
 import com.ait.lienzo.shared.core.types.ColorName;
 import org.roger600.lienzo.client.MyLienzoTest;
 
-public class CardinalIntersectKSTests implements MyLienzoTest {
+public class CardinalIntersectKSTests extends MyLienzoTest {
 
     @Override
     public void test(final Layer layer) {
@@ -359,10 +359,4 @@ public class CardinalIntersectKSTests implements MyLienzoTest {
     {
         container.add(new Circle(3).setLocation(p).setFillColor(ColorName.RED).setStrokeColor(ColorName.RED));
     }
-
-    @Override
-    public int compareTo(MyLienzoTest other) {
-        return this.getClass().getSimpleName().compareTo(other.getClass().getSimpleName());
-    }
-
 }

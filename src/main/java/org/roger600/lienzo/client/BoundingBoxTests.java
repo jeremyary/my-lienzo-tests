@@ -6,9 +6,8 @@ import com.ait.lienzo.client.core.shape.Rectangle;
 import com.ait.lienzo.client.core.types.BoundingBox;
 import com.ait.lienzo.shared.core.types.ColorName;
 import com.google.gwt.core.client.GWT;
-import com.google.gwt.user.client.ui.FlowPanel;
 
-public class BoundingBoxTests extends FlowPanel implements MyLienzoTest {
+public class BoundingBoxTests extends MyLienzoTest {
 
 
     /*
@@ -64,10 +63,4 @@ public class BoundingBoxTests extends FlowPanel implements MyLienzoTest {
     private void log( String s ) {
         // GWT.log( s );
     }
-
-    @Override
-    public int compareTo(MyLienzoTest other) {
-        return this.getClass().getSimpleName().compareTo(other.getClass().getSimpleName());
-    }
-
 }

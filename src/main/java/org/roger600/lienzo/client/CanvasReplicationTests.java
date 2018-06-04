@@ -5,9 +5,7 @@ import com.ait.lienzo.client.core.mediator.IEventFilter;
 import com.ait.lienzo.client.core.mediator.Mediators;
 import com.ait.lienzo.client.core.mediator.MousePanMediator;
 import com.ait.lienzo.client.core.mediator.MouseWheelZoomMediator;
-import com.ait.lienzo.client.core.shape.GridLayer;
 import com.ait.lienzo.client.core.shape.Layer;
-import com.ait.lienzo.client.core.shape.Line;
 import com.ait.lienzo.client.core.shape.MultiPath;
 import com.ait.lienzo.client.core.shape.Rectangle;
 import com.ait.lienzo.client.core.shape.Viewport;
@@ -181,7 +179,7 @@ public class CanvasReplicationTests implements EntryPoint {
         container.getElement().getStyle().setBorderColor( "#000000" );
 
         final LienzoPanel panel = new LienzoPanel(600, 600);
-        applyGrid( panel );
+        MyLienzoTest.applyBackgroundGridLayer(panel);
         final Layer layer = new Layer();
 
         container.add( panel );
@@ -275,23 +273,4 @@ public class CanvasReplicationTests implements EntryPoint {
         mediators.push( new MouseWheelZoomMediator( zommFilters ).setMinScale(0).setMaxScale(1) );
         mediators.push( new MousePanMediator( panFilters ) );
     }
-
-    private void applyGrid( final LienzoPanel panel ) {
-
-        // Grid.
-        Line line1 = new Line( 0, 0, 0, 0 )
-                .setStrokeColor( "#0000FF" )
-                .setAlpha( 0.2 );
-        Line line2 = new Line( 0, 0, 0, 0 )
-                .setStrokeColor( "#00FF00"  )
-                .setAlpha( 0.2 );
-
-        line2.setDashArray( 2,
-                2 );
-
-        GridLayer gridLayer = new GridLayer( 100, line1, 25, line2 );
-
-        panel.setBackgroundLayer( gridLayer );
-    }
-
 }

@@ -15,11 +15,10 @@ import com.google.gwt.core.client.GWT;
 import com.google.gwt.event.dom.client.ClickEvent;
 import com.google.gwt.event.dom.client.ClickHandler;
 import com.google.gwt.user.client.ui.Button;
-import com.google.gwt.user.client.ui.FlowPanel;
 import com.google.gwt.user.client.ui.Panel;
 
 
-public class TransformTests extends FlowPanel implements MyLienzoTest, HasButtons {
+public class TransformTests extends MyLienzoTest implements HasButtons {
 
     private final IEventFilter[] zommFilters = new IEventFilter[] { EventFilter.CONTROL };
     private final IEventFilter[] panFilters = new IEventFilter[] { EventFilter.SHIFT };
@@ -142,10 +141,5 @@ public class TransformTests extends FlowPanel implements MyLienzoTest, HasButton
         } else {
             GWT.log( title + " Transform is NULL." );
         }
-    }
-
-    @Override
-    public int compareTo(MyLienzoTest other) {
-        return this.getClass().getSimpleName().compareTo(other.getClass().getSimpleName());
     }
 }

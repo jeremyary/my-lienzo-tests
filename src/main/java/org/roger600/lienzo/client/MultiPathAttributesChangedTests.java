@@ -21,7 +21,7 @@ import com.google.gwt.core.client.GWT;
 
 import static com.ait.lienzo.client.core.AttributeOp.any;
 
-public class MultiPathAttributesChangedTests implements MyLienzoTest {
+public class MultiPathAttributesChangedTests extends MyLienzoTest {
 
     private static final Flows.BooleanOp XY_OP  = any( Attribute.X, Attribute.Y );
     private static final Flows.BooleanOp WH_OP  = any( Attribute.WIDTH, Attribute.HEIGHT );
@@ -32,7 +32,7 @@ public class MultiPathAttributesChangedTests implements MyLienzoTest {
     private MultiPath    m_multi;
     private Layer layer;
 
-    public void test( final Layer layer ) {
+    public void test(final Layer layer ) {
         this.layer = layer;
 
         m_multi = new MultiPath()
@@ -262,10 +262,5 @@ public class MultiPathAttributesChangedTests implements MyLienzoTest {
                 Attribute.TAIL_DIRECTION,
                 Attribute.EVENT_PROPAGATION_MODE
         };
-    }
-
-    @Override
-    public int compareTo(MyLienzoTest other) {
-        return this.getClass().getSimpleName().compareTo(other.getClass().getSimpleName());
     }
 }

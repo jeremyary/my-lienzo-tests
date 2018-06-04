@@ -18,8 +18,7 @@ import com.google.gwt.user.client.ui.Widget;
 import org.roger600.lienzo.client.resources.LienzoTestsResources;
 import org.roger600.lienzo.client.util.Base64Util;
 
-public class SVGPicturesTests implements MyLienzoTest,
-                                         HasButtons {
+public class SVGPicturesTests extends MyLienzoTest implements HasButtons {
 
     public static final String SVG_DATA_URI_B64 = "data:image/svg+xml;base64,";
     public static final String SVG_DATA_URI_XML = "data:image/svg+xml;utf8,";
@@ -223,10 +222,5 @@ public class SVGPicturesTests implements MyLienzoTest,
         return new double[]{
                 width > 0 ? targetWidth / width : 1,
                 height > 0 ? targetHeight / height : 1};
-    }
-
-    @Override
-    public int compareTo(MyLienzoTest other) {
-        return this.getClass().getSimpleName().compareTo(other.getClass().getSimpleName());
     }
 }

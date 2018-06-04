@@ -8,10 +8,9 @@ import com.ait.lienzo.client.core.shape.wires.WiresManager;
 import com.ait.lienzo.client.core.shape.wires.WiresShape;
 import com.ait.lienzo.client.core.types.Point2D;
 import com.ait.lienzo.shared.core.types.ColorName;
-import com.google.gwt.user.client.ui.FlowPanel;
 import com.google.gwt.user.client.ui.Panel;
 
-public class FontTests extends FlowPanel implements MyLienzoTest, HasMediators, HasButtons {
+public class FontTests extends MyLienzoTest implements HasMediators, HasButtons {
 
     private static final String FAMILY = "Verdana";
     private static final String COLOR = "#000000";
@@ -64,10 +63,5 @@ public class FontTests extends FlowPanel implements MyLienzoTest, HasMediators, 
         shape.setDraggable(true);
         wiresManager.getMagnetManager().createMagnets( shape );
         return shape;
-    }
-
-    @Override
-    public int compareTo(MyLienzoTest other) {
-        return this.getClass().getSimpleName().compareTo(other.getClass().getSimpleName());
     }
 }

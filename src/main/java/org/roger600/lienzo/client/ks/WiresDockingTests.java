@@ -9,13 +9,11 @@ import com.ait.lienzo.client.core.shape.wires.WiresManager;
 import com.ait.lienzo.client.core.shape.wires.WiresShape;
 import com.ait.lienzo.client.core.types.Point2D;
 import com.ait.lienzo.shared.core.types.ColorName;
-import com.google.gwt.user.client.ui.FlowPanel;
 import org.roger600.lienzo.client.HasMediators;
 import org.roger600.lienzo.client.MyLienzoTest;
 import org.roger600.lienzo.client.TestsUtils;
 
-public class WiresDockingTests extends FlowPanel implements MyLienzoTest,
-                                                            HasMediators {
+public class WiresDockingTests extends MyLienzoTest implements HasMediators {
 
     public void test(Layer layer) {
 
@@ -127,10 +125,5 @@ public class WiresDockingTests extends FlowPanel implements MyLienzoTest,
         dockShape.setDraggable(true);
         wires_manager.getMagnetManager().createMagnets(dockShape);
         TestsUtils.addResizeHandlers(dockShape);
-    }
-
-    @Override
-    public int compareTo(MyLienzoTest other) {
-        return this.getClass().getSimpleName().compareTo(other.getClass().getSimpleName());
     }
 }

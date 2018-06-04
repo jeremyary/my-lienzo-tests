@@ -8,16 +8,15 @@ import com.ait.lienzo.client.core.shape.Layer;
 import com.ait.lienzo.client.core.shape.MultiPath;
 import com.ait.lienzo.client.core.shape.wires.IControlHandle;
 import com.ait.lienzo.client.core.shape.wires.IControlHandleList;
-import com.google.gwt.user.client.ui.FlowPanel;
 import org.roger600.lienzo.client.HasMediators;
 import org.roger600.lienzo.client.MyLienzoTest;
 
-public class MultiPathResizeTests extends FlowPanel implements MyLienzoTest, HasMediators {
+public class MultiPathResizeTests extends MyLienzoTest implements HasMediators {
 
     private IControlHandleList m_ctrls;
     private MultiPath    m_multi;
 
-    public void test( final Layer layer ) {
+    public void test(final Layer layer ) {
 
         m_multi = new MultiPath();
 
@@ -91,10 +90,5 @@ public class MultiPathResizeTests extends FlowPanel implements MyLienzoTest, Has
 
         layer.add(m_multi);
 
-    }
-
-    @Override
-    public int compareTo(MyLienzoTest other) {
-        return this.getClass().getSimpleName().compareTo(other.getClass().getSimpleName());
     }
 }

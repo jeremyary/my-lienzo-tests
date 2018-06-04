@@ -6,21 +6,33 @@ import com.ait.lienzo.client.core.shape.Circle;
 import com.ait.lienzo.client.core.shape.Layer;
 import com.ait.lienzo.client.core.shape.MultiPath;
 import com.ait.lienzo.client.core.shape.Text;
-import com.ait.lienzo.client.core.shape.wires.*;
-import com.ait.lienzo.client.core.shape.wires.event.*;
+import com.ait.lienzo.client.core.shape.wires.IControlHandle;
+import com.ait.lienzo.client.core.shape.wires.IControlHandleList;
+import com.ait.lienzo.client.core.shape.wires.LayoutContainer;
+import com.ait.lienzo.client.core.shape.wires.WiresManager;
+import com.ait.lienzo.client.core.shape.wires.WiresShape;
+import com.ait.lienzo.client.core.shape.wires.event.WiresResizeEndEvent;
+import com.ait.lienzo.client.core.shape.wires.event.WiresResizeEndHandler;
+import com.ait.lienzo.client.core.shape.wires.event.WiresResizeStartEvent;
+import com.ait.lienzo.client.core.shape.wires.event.WiresResizeStartHandler;
+import com.ait.lienzo.client.core.shape.wires.event.WiresResizeStepEvent;
+import com.ait.lienzo.client.core.shape.wires.event.WiresResizeStepHandler;
 import com.ait.lienzo.client.core.types.Point2D;
 import com.ait.lienzo.shared.core.types.ColorName;
 import com.google.gwt.event.dom.client.ClickEvent;
 import com.google.gwt.event.dom.client.ClickHandler;
 import com.google.gwt.user.client.ui.Button;
-import com.google.gwt.user.client.ui.FlowPanel;
 import com.google.gwt.user.client.ui.Panel;
 import org.roger600.lienzo.client.HasButtons;
 import org.roger600.lienzo.client.MyLienzoTest;
 
-import static com.ait.lienzo.client.core.shape.wires.LayoutContainer.Layout.*;
+import static com.ait.lienzo.client.core.shape.wires.LayoutContainer.Layout.BOTTOM;
+import static com.ait.lienzo.client.core.shape.wires.LayoutContainer.Layout.CENTER;
+import static com.ait.lienzo.client.core.shape.wires.LayoutContainer.Layout.LEFT;
+import static com.ait.lienzo.client.core.shape.wires.LayoutContainer.Layout.RIGHT;
+import static com.ait.lienzo.client.core.shape.wires.LayoutContainer.Layout.TOP;
 
-public class WiresResizesTests extends FlowPanel implements MyLienzoTest, HasButtons {
+public class WiresResizesTests extends MyLienzoTest implements HasButtons {
 
     private static final double SIZE = 100;
 
@@ -28,7 +40,7 @@ public class WiresResizesTests extends FlowPanel implements MyLienzoTest, HasBut
     private WiresManager wires_manager;
     private Text text;
 
-    public void test( final Layer layer ) {
+    public void test(final Layer layer) {
 
         wires_manager = WiresManager.get( layer );
 
@@ -193,10 +205,5 @@ public class WiresResizesTests extends FlowPanel implements MyLienzoTest, HasBut
 
     private WiresShape bottom() {
         return create( "#CCCC00", SIZE, BOTTOM );
-    }
-
-    @Override
-    public int compareTo(MyLienzoTest other) {
-        return this.getClass().getSimpleName().compareTo(other.getClass().getSimpleName());
     }
 }

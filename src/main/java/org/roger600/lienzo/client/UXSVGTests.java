@@ -17,14 +17,13 @@ import com.ait.lienzo.client.core.shape.wires.event.WiresResizeStepHandler;
 import com.ait.lienzo.client.core.types.BoundingBox;
 import com.ait.lienzo.shared.core.types.ColorName;
 import com.google.gwt.core.client.GWT;
-import com.google.gwt.user.client.ui.FlowPanel;
 import com.google.gwt.user.client.ui.Panel;
 import org.roger600.lienzo.client.resources.LienzoTestsResources;
 
-public class UXSVGTests extends FlowPanel implements MyLienzoTest, HasMediators, HasButtons {
+public class UXSVGTests extends MyLienzoTest implements HasMediators, HasButtons {
 
     @Override
-    public void test( Layer layer ) {
+    public void test(Layer layer ) {
         addPictureWiresShape( layer, 0, 0, LienzoTestsResources.INSTANCE.envelopeNoGridIconSVG().getSafeUri().asString() );
         // addPictureShape( layer, 200, 200, LienzoTestsResources.INSTANCE.envelopeIconSVG().getSafeUri().asString() );
         // addSvgPath( layer, 200, 200 );
@@ -143,10 +142,5 @@ public class UXSVGTests extends FlowPanel implements MyLienzoTest, HasMediators,
 
     private void log( String s ) {
         GWT.log( s );
-    }
-
-    @Override
-    public int compareTo(MyLienzoTest other) {
-        return this.getClass().getSimpleName().compareTo(other.getClass().getSimpleName());
     }
 }

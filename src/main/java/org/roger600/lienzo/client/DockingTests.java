@@ -9,9 +9,8 @@ import com.ait.lienzo.client.core.shape.wires.WiresManager;
 import com.ait.lienzo.client.core.shape.wires.WiresShape;
 import com.ait.lienzo.client.core.types.Point2D;
 import com.google.gwt.core.client.GWT;
-import com.google.gwt.user.client.ui.FlowPanel;
 
-public class DockingTests extends FlowPanel implements MyLienzoTest, HasMediators {
+public class DockingTests extends MyLienzoTest implements HasMediators {
 
     private Layer layer;
 
@@ -104,10 +103,5 @@ public class DockingTests extends FlowPanel implements MyLienzoTest, HasMediator
 
         child.setDockedTo(parentShape);
         
-    }
-
-    @Override
-    public int compareTo(MyLienzoTest other) {
-        return this.getClass().getSimpleName().compareTo(other.getClass().getSimpleName());
     }
 }

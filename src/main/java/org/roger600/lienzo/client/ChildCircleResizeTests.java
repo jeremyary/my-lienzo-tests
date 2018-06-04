@@ -17,10 +17,9 @@ import com.ait.lienzo.client.core.types.Point2D;
 import com.google.gwt.event.dom.client.ClickEvent;
 import com.google.gwt.event.dom.client.ClickHandler;
 import com.google.gwt.user.client.ui.Button;
-import com.google.gwt.user.client.ui.FlowPanel;
 import com.google.gwt.user.client.ui.Panel;
 
-public class ChildCircleResizeTests extends FlowPanel implements MyLienzoTest, HasButtons, HasMediators {
+public class ChildCircleResizeTests extends MyLienzoTest implements HasButtons, HasMediators {
 
     WiresManager wires_manager;
 
@@ -147,10 +146,5 @@ public class ChildCircleResizeTests extends FlowPanel implements MyLienzoTest, H
 
     private void log(String s) {
         // GWT.log( s );
-    }
-
-    @Override
-    public int compareTo(MyLienzoTest other) {
-        return this.getClass().getSimpleName().compareTo(other.getClass().getSimpleName());
     }
 }

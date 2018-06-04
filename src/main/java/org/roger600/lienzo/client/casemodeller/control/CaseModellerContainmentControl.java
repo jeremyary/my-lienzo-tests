@@ -76,13 +76,13 @@ public class CaseModellerContainmentControl implements WiresContainmentControl {
         if (m_ghost != null && getParent() != null) {
 
             // expand containment shape if attempting to drag right beyond horizontal boundary
-//            double shapeX = getShape().getLocation().getX() + ((AbstractCaseModellerShape) getShape()).getWidth();
-//            CaseModellerShape containmentShape = getContainmentShape();
-//            if (containmentShape != null && shapeX > containmentShape.getWidth()) {
-//                containmentShape.setWidth(containmentShape.getWidth() + 100d);
-//                containmentControl.onMoveComplete();
-//                return false;
-//            }
+            double shapeX = getShape().getLocation().getX() + ((AbstractCaseModellerShape) getShape()).getWidth();
+            CaseModellerShape containmentShape = getContainmentShape();
+            if (containmentShape != null && shapeX > containmentShape.getWidth()) {
+                containmentShape.setWidth(containmentShape.getWidth() + 100d);
+                containmentControl.onMoveComplete();
+                return false;
+            }
 
             //Handle moving ghost from one container to another
             if (getWiresManager().getContainmentAcceptor().acceptContainment(getParent(),

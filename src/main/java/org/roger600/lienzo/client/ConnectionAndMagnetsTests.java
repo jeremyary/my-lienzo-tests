@@ -31,14 +31,12 @@ import com.google.gwt.core.client.GWT;
 import com.google.gwt.event.dom.client.ClickEvent;
 import com.google.gwt.event.dom.client.ClickHandler;
 import com.google.gwt.user.client.ui.Button;
-import com.google.gwt.user.client.ui.FlowPanel;
 import com.google.gwt.user.client.ui.Label;
 import com.google.gwt.user.client.ui.Panel;
 
 import static com.ait.lienzo.client.core.shape.wires.LayoutContainer.Layout.CENTER;
 
-public class ConnectionAndMagnetsTests extends FlowPanel implements MyLienzoTest,
-                                                                    HasButtons {
+public class ConnectionAndMagnetsTests extends MyLienzoTest implements HasButtons {
 
     private WiresManager wiresManager;
     private WiresShape redShape;

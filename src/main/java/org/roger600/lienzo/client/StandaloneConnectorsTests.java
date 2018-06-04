@@ -20,11 +20,10 @@ import com.ait.lienzo.shared.core.types.ColorName;
 import com.google.gwt.event.dom.client.ClickEvent;
 import com.google.gwt.event.dom.client.ClickHandler;
 import com.google.gwt.user.client.ui.Button;
-import com.google.gwt.user.client.ui.FlowPanel;
 import com.google.gwt.user.client.ui.Panel;
 
 
-public class StandaloneConnectorsTests extends FlowPanel implements MyLienzoTest, HasMediators, HasButtons {
+public class StandaloneConnectorsTests extends MyLienzoTest implements HasMediators, HasButtons {
 
     private WiresConnector c1;
     private WiresConnectorControl control1;
@@ -184,10 +183,5 @@ public class StandaloneConnectorsTests extends FlowPanel implements MyLienzoTest
         final OrthogonalPolyLine line = new OrthogonalPolyLine(Point2DArray.fromArrayOfDouble(points)).setCornerRadius(5).setDraggable(true);
         layer.add( line );
         return line;
-    }
-
-    @Override
-    public int compareTo(MyLienzoTest other) {
-        return this.getClass().getSimpleName().compareTo(other.getClass().getSimpleName());
     }
 }

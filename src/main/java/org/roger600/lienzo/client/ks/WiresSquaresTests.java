@@ -12,7 +12,6 @@ import com.ait.lienzo.client.core.shape.wires.WiresManager;
 import com.ait.lienzo.client.core.shape.wires.WiresShape;
 import com.ait.lienzo.client.core.types.Point2D;
 import com.ait.lienzo.client.core.types.Point2DArray;
-import com.google.gwt.user.client.ui.FlowPanel;
 import org.roger600.lienzo.client.MyLienzoTest;
 import org.roger600.lienzo.client.TestsUtils;
 
@@ -22,7 +21,7 @@ import static com.ait.lienzo.client.core.shape.wires.LayoutContainer.Layout.LEFT
 import static com.ait.lienzo.client.core.shape.wires.LayoutContainer.Layout.RIGHT;
 import static com.ait.lienzo.client.core.shape.wires.LayoutContainer.Layout.TOP;
 
-public class WiresSquaresTests extends FlowPanel implements MyLienzoTest {
+public class WiresSquaresTests extends MyLienzoTest {
 
     public void test(final Layer layer) {
 
@@ -261,10 +260,5 @@ public class WiresSquaresTests extends FlowPanel implements MyLienzoTest {
                                                 double y,
                                                 final double... points) {
         return new OrthogonalPolyLine(Point2DArray.fromArrayOfDouble(points)).setCornerRadius(5).setDraggable(true);
-    }
-
-    @Override
-    public int compareTo(MyLienzoTest other) {
-        return this.getClass().getSimpleName().compareTo(other.getClass().getSimpleName());
     }
 }

@@ -17,10 +17,9 @@ import com.ait.lienzo.client.core.types.DragBounds;
 import com.ait.lienzo.client.core.types.Point2D;
 import com.ait.lienzo.shared.core.types.ColorName;
 import com.google.gwt.core.client.GWT;
-import com.google.gwt.user.client.ui.FlowPanel;
 import com.google.gwt.user.client.ui.Panel;
 
-public class DragConstraintsTests extends FlowPanel implements MyLienzoTest, HasMediators, HasButtons {
+public class DragConstraintsTests extends MyLienzoTest implements HasMediators, HasButtons {
 
     public void setButtonsPanel( Panel panel ) {
 
@@ -102,10 +101,5 @@ public class DragConstraintsTests extends FlowPanel implements MyLienzoTest, Has
         layer.add( parent );
         layer.add( child );
 
-    }
-
-    @Override
-    public int compareTo(MyLienzoTest other) {
-        return this.getClass().getSimpleName().compareTo(other.getClass().getSimpleName());
     }
 }

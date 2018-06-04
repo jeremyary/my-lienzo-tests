@@ -1,15 +1,18 @@
 package org.roger600.lienzo.client.ks;
 
-import com.ait.lienzo.client.core.shape.*;
+import com.ait.lienzo.client.core.shape.Circle;
+import com.ait.lienzo.client.core.shape.Layer;
+import com.ait.lienzo.client.core.shape.Rectangle;
+import com.ait.lienzo.client.core.shape.Star;
+import com.ait.lienzo.client.core.shape.Text;
 import com.ait.lienzo.client.core.shape.wires.AlignAndDistribute;
 import com.ait.lienzo.shared.core.types.ColorName;
-import com.google.gwt.user.client.ui.FlowPanel;
 import org.roger600.lienzo.client.MyLienzoTest;
 
 // TODO: Not working??
-public class WiresAlignDistroTests extends FlowPanel implements MyLienzoTest {
+public class WiresAlignDistroTests extends MyLienzoTest {
 
-    public void test( final Layer layer ) {
+    public void test(final Layer layer) {
 
         Rectangle rect1 = new Rectangle(100, 100);
         rect1.setDraggable(true);
@@ -84,10 +87,5 @@ public class WiresAlignDistroTests extends FlowPanel implements MyLienzoTest {
         index.addShape(text1);
         index.addShape(star1);
 
-    }
-
-    @Override
-    public int compareTo(MyLienzoTest other) {
-        return this.getClass().getSimpleName().compareTo(other.getClass().getSimpleName());
     }
 }

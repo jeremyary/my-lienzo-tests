@@ -16,17 +16,16 @@ import com.ait.lienzo.client.core.shape.wires.event.WiresResizeStartHandler;
 import com.ait.lienzo.client.core.shape.wires.event.WiresResizeStepEvent;
 import com.ait.lienzo.client.core.shape.wires.event.WiresResizeStepHandler;
 import com.ait.lienzo.client.core.types.Point2D;
-import com.google.gwt.user.client.ui.FlowPanel;
 
 import static com.ait.lienzo.client.core.shape.wires.LayoutContainer.Layout.CENTER;
 
-public class WiresRingTests extends FlowPanel implements MyLienzoTest, HasMediators {
+public class WiresRingTests extends MyLienzoTest implements HasMediators {
 
     private WiresShape wiresShape0;
     private Ring ring;
     private Layer layer;
 
-    public void test( final Layer layer ) {
+    public void test(final Layer layer ) {
 
         this.layer = layer;
 
@@ -111,10 +110,4 @@ public class WiresRingTests extends FlowPanel implements MyLienzoTest, HasMediat
                     }
                 } );
     }
-
-    @Override
-    public int compareTo(MyLienzoTest other) {
-        return this.getClass().getSimpleName().compareTo(other.getClass().getSimpleName());
-    }
-
 }

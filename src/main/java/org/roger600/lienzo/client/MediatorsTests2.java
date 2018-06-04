@@ -16,10 +16,9 @@ import com.ait.lienzo.client.core.shape.wires.WiresManager;
 import com.ait.lienzo.client.core.shape.wires.WiresShape;
 import com.ait.lienzo.client.core.types.Point2D;
 import com.ait.lienzo.client.core.types.Point2DArray;
-import com.google.gwt.user.client.ui.FlowPanel;
 
 
-public class MediatorsTests2 extends FlowPanel implements MyLienzoTest {
+public class MediatorsTests2 extends MyLienzoTest {
 
     private Layer layer;
     private final IEventFilter[] zommFilters = new IEventFilter[] { EventFilter.CONTROL };
@@ -148,10 +147,5 @@ public class MediatorsTests2 extends FlowPanel implements MyLienzoTest {
         final OrthogonalPolyLine line = new OrthogonalPolyLine(Point2DArray.fromArrayOfDouble(points)).setCornerRadius(5).setDraggable(true);
         layer.add( line );
         return line;
-    }
-
-    @Override
-    public int compareTo(MyLienzoTest other) {
-        return this.getClass().getSimpleName().compareTo(other.getClass().getSimpleName());
     }
 }

@@ -27,11 +27,10 @@ import com.google.gwt.event.dom.client.ClickEvent;
 import com.google.gwt.event.dom.client.ClickHandler;
 import com.google.gwt.user.client.Timer;
 import com.google.gwt.user.client.ui.Button;
-import com.google.gwt.user.client.ui.FlowPanel;
 import com.google.gwt.user.client.ui.Panel;
 import org.roger600.lienzo.client.dmn.DirectionalLine;
 
-public class SelectionManagerTests extends FlowPanel implements MyLienzoTest, HasMediators, HasButtons {
+public class SelectionManagerTests extends MyLienzoTest implements HasMediators, HasButtons {
 
     private WiresManager wires_manager;
     private boolean isDockingAccept = true;
@@ -462,10 +461,5 @@ public class SelectionManagerTests extends FlowPanel implements MyLienzoTest, Ha
 
     private static void log(final String message) {
         GWT.log(message);
-    }
-
-    @Override
-    public int compareTo(MyLienzoTest other) {
-        return this.getClass().getSimpleName().compareTo(other.getClass().getSimpleName());
     }
 }

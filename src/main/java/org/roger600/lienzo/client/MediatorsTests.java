@@ -24,11 +24,10 @@ import com.google.gwt.core.client.GWT;
 import com.google.gwt.event.dom.client.ClickEvent;
 import com.google.gwt.event.dom.client.ClickHandler;
 import com.google.gwt.user.client.ui.Button;
-import com.google.gwt.user.client.ui.FlowPanel;
 import com.google.gwt.user.client.ui.Panel;
 
 
-public class MediatorsTests extends FlowPanel implements MyLienzoTest, HasButtons, NeedsThePanel {
+public class MediatorsTests extends MyLienzoTest implements HasButtons, NeedsThePanel {
 
     private final IEventFilter[] zommFilters = new IEventFilter[] { EventFilter.CONTROL };
     private final IEventFilter[] panFilters = new IEventFilter[] { EventFilter.SHIFT };
@@ -202,10 +201,5 @@ public class MediatorsTests extends FlowPanel implements MyLienzoTest, HasButton
         final int tw = (int) (w - ( w * factor));
         final int th = (int) (h - ( h * factor));
         lienzoPanel.setPixelSize(tw, th);
-    }
-
-    @Override
-    public int compareTo(MyLienzoTest other) {
-        return this.getClass().getSimpleName().compareTo(other.getClass().getSimpleName());
     }
 }

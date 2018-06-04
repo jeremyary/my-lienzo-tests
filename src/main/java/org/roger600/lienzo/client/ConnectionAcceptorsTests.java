@@ -29,10 +29,9 @@ import com.ait.lienzo.client.core.types.Point2D;
 import com.ait.lienzo.client.core.types.Point2DArray;
 import com.ait.lienzo.shared.core.types.ColorName;
 import com.google.gwt.core.client.GWT;
-import com.google.gwt.user.client.ui.FlowPanel;
 
 
-public class ConnectionAcceptorsTests extends FlowPanel implements MyLienzoTest, HasMediators {
+public class ConnectionAcceptorsTests extends MyLienzoTest implements HasMediators {
 
     private final IEventFilter[] zommFilters = new IEventFilter[] { EventFilter.CONTROL };
     private final IEventFilter[] panFilters = new IEventFilter[] { EventFilter.SHIFT };
@@ -286,10 +285,4 @@ public class ConnectionAcceptorsTests extends FlowPanel implements MyLienzoTest,
         mediators.push( new MouseWheelZoomMediator( zommFilters ) );
         mediators.push( new MousePanMediator( panFilters ) );
     }
-
-    @Override
-    public int compareTo(MyLienzoTest other) {
-        return this.getClass().getSimpleName().compareTo(other.getClass().getSimpleName());
-    }
-
 }

@@ -5,11 +5,10 @@ import com.ait.lienzo.client.core.shape.Picture;
 import com.google.gwt.event.dom.client.ClickEvent;
 import com.google.gwt.event.dom.client.ClickHandler;
 import com.google.gwt.user.client.ui.Button;
-import com.google.gwt.user.client.ui.FlowPanel;
 import com.google.gwt.user.client.ui.Panel;
 import org.roger600.lienzo.client.resources.LienzoTestsResources;
 
-public class ImagesTests extends FlowPanel implements MyLienzoTest, HasMediators, HasButtons {
+public class ImagesTests extends MyLienzoTest implements HasMediators, HasButtons {
 
     private Layer layer;
     private Picture pictureJPG;
@@ -70,10 +69,5 @@ public class ImagesTests extends FlowPanel implements MyLienzoTest, HasMediators
         picturePNG.setX( 800 ).setY( 50 ).setDraggable( true );
         layer.add( picturePNG );
 
-    }
-
-    @Override
-    public int compareTo(MyLienzoTest other) {
-        return this.getClass().getSimpleName().compareTo(other.getClass().getSimpleName());
     }
 }

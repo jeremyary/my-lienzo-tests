@@ -24,9 +24,8 @@ import com.ait.lienzo.client.core.shape.wires.event.WiresResizeStepHandler;
 import com.ait.lienzo.client.core.types.Point2D;
 import com.ait.lienzo.shared.core.types.ColorName;
 import com.google.gwt.core.client.GWT;
-import com.google.gwt.user.client.ui.FlowPanel;
 
-public class MagnetsAndCPsTests extends FlowPanel implements MyLienzoTest, HasMediators {
+public class MagnetsAndCPsTests extends MyLienzoTest implements HasMediators {
 
     private final IEventFilter[] zommFilters = new IEventFilter[] { EventFilter.CONTROL };
     private final IEventFilter[] panFilters = new IEventFilter[] { EventFilter.SHIFT };
@@ -150,10 +149,5 @@ public class MagnetsAndCPsTests extends FlowPanel implements MyLienzoTest, HasMe
 
     private void log( String s ) {
         GWT.log( s );
-    }
-
-    @Override
-    public int compareTo(MyLienzoTest other) {
-        return this.getClass().getSimpleName().compareTo(other.getClass().getSimpleName());
     }
 }

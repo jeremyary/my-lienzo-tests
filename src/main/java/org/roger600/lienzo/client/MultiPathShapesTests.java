@@ -11,9 +11,8 @@ import com.ait.lienzo.client.core.shape.wires.WiresShape;
 import com.ait.lienzo.client.core.types.BoundingBox;
 import com.ait.lienzo.client.core.types.Point2D;
 import com.ait.lienzo.shared.core.types.ColorName;
-import com.google.gwt.user.client.ui.FlowPanel;
 
-public class MultiPathShapesTests extends FlowPanel implements MyLienzoTest {
+public class MultiPathShapesTests extends MyLienzoTest {
 
     private static final String BLACK = ColorName.BLACK.getColorString();
 
@@ -119,10 +118,5 @@ public class MultiPathShapesTests extends FlowPanel implements MyLienzoTest {
     private static SVGPath createSVGPath( final String path ) {
         return new SVGPath(path)
                 .setDraggable(false);
-    }
-
-    @Override
-    public int compareTo(MyLienzoTest other) {
-        return this.getClass().getSimpleName().compareTo(other.getClass().getSimpleName());
     }
 }

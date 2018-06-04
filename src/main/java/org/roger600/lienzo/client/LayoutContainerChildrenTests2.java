@@ -11,10 +11,9 @@ import com.ait.lienzo.client.core.shape.wires.WiresLayoutContainer;
 import com.ait.lienzo.client.core.shape.wires.WiresManager;
 import com.ait.lienzo.client.core.shape.wires.WiresShape;
 import com.google.gwt.core.client.GWT;
-import com.google.gwt.user.client.ui.FlowPanel;
 import com.google.gwt.user.client.ui.Panel;
 
-public class LayoutContainerChildrenTests2 extends FlowPanel implements MyLienzoTest, HasButtons, HasMediators {
+public class LayoutContainerChildrenTests2 extends MyLienzoTest implements HasButtons, HasMediators {
 
     private Layer layer;
     private WiresShape parentShape;
@@ -68,10 +67,5 @@ public class LayoutContainerChildrenTests2 extends FlowPanel implements MyLienzo
     @Override
     public void setButtonsPanel( Panel panel ) {
 
-    }
-
-    @Override
-    public int compareTo(MyLienzoTest other) {
-        return this.getClass().getSimpleName().compareTo(other.getClass().getSimpleName());
     }
 }

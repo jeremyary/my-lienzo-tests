@@ -16,9 +16,8 @@ import com.ait.lienzo.client.core.shape.wires.event.WiresDragStartHandler;
 import com.ait.lienzo.client.core.types.Point2D;
 import com.ait.lienzo.shared.core.types.ColorName;
 import com.google.gwt.core.client.GWT;
-import com.google.gwt.user.client.ui.FlowPanel;
 
-public class WiresDragHandlersTests extends FlowPanel implements MyLienzoTest, HasMediators {
+public class WiresDragHandlersTests extends MyLienzoTest implements HasMediators {
 
     
     /*
@@ -99,10 +98,5 @@ public class WiresDragHandlersTests extends FlowPanel implements MyLienzoTest, H
             }
         } );
 
-    }
-
-    @Override
-    public int compareTo(MyLienzoTest other) {
-        return this.getClass().getSimpleName().compareTo(other.getClass().getSimpleName());
     }
 }

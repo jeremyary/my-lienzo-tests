@@ -14,9 +14,8 @@ import com.ait.lienzo.client.core.types.Point2D;
 import com.ait.lienzo.client.core.types.Point2DArray;
 import com.ait.lienzo.client.core.util.Geometry;
 import com.ait.lienzo.shared.core.types.ColorName;
-import com.google.gwt.user.client.ui.FlowPanel;
 
-public class BasicWiresShapesTests extends FlowPanel implements MyLienzoTest {
+public class BasicWiresShapesTests extends MyLienzoTest {
 
     private static final double SIZE = 100;
     private static final double RADIUS = SIZE / 2;
@@ -285,10 +284,5 @@ public class BasicWiresShapesTests extends FlowPanel implements MyLienzoTest {
 
     private void setResizable( WiresShape shape ) {
         TestsUtils.addResizeHandlers( shape );
-    }
-
-    @Override
-    public int compareTo(MyLienzoTest other) {
-        return this.getClass().getSimpleName().compareTo(other.getClass().getSimpleName());
     }
 }

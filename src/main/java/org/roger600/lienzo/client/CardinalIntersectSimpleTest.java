@@ -12,7 +12,7 @@ import com.ait.lienzo.client.core.util.Geometry;
 import com.ait.lienzo.shared.core.types.ColorName;
 import com.google.gwt.core.client.GWT;
 
-public class CardinalIntersectSimpleTest implements MyLienzoTest {
+public class CardinalIntersectSimpleTest extends MyLienzoTest {
 
     @Override
     public void test(final Layer layer) {
@@ -134,10 +134,5 @@ public class CardinalIntersectSimpleTest implements MyLienzoTest {
                 GWT.log("[" + x++ + "] " + "{" + point2D.getX() + ", " + point2D.getY() + "}" );
             }
         }
-    }
-
-    @Override
-    public int compareTo(MyLienzoTest other) {
-        return this.getClass().getSimpleName().compareTo(other.getClass().getSimpleName());
     }
 }

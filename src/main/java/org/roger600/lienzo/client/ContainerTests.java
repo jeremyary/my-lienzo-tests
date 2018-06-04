@@ -8,10 +8,9 @@ import com.ait.lienzo.client.core.shape.wires.WiresManager;
 import com.ait.lienzo.client.core.shape.wires.WiresShape;
 import com.ait.lienzo.client.core.types.Point2D;
 import com.google.gwt.core.client.GWT;
-import com.google.gwt.user.client.ui.FlowPanel;
 
 
-public class ContainerTests extends FlowPanel implements MyLienzoTest, HasMediators {
+public class ContainerTests extends MyLienzoTest implements HasMediators {
 
     private Layer layer;
 
@@ -65,10 +64,5 @@ public class ContainerTests extends FlowPanel implements MyLienzoTest, HasMediat
 
     private void log(String message) {
         // GWT.log(message);
-    }
-
-    @Override
-    public int compareTo(MyLienzoTest other) {
-        return this.getClass().getSimpleName().compareTo(other.getClass().getSimpleName());
     }
 }

@@ -12,9 +12,8 @@ import com.ait.lienzo.client.core.shape.wires.WiresShape;
 import com.ait.lienzo.client.core.types.Point2D;
 import com.ait.lienzo.shared.core.types.ColorName;
 import com.google.gwt.core.client.GWT;
-import com.google.gwt.user.client.ui.FlowPanel;
 
-public class DeleteChildTests extends FlowPanel implements MyLienzoTest {
+public class DeleteChildTests extends MyLienzoTest {
 
     public void test(Layer _layer) {
         final Layer layer = _layer;
@@ -57,10 +56,5 @@ public class DeleteChildTests extends FlowPanel implements MyLienzoTest {
             }
         });
         layer.add(button);
-    }
-
-    @Override
-    public int compareTo(MyLienzoTest other) {
-        return this.getClass().getSimpleName().compareTo(other.getClass().getSimpleName());
     }
 }

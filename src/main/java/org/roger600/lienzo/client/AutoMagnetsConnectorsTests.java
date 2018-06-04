@@ -15,10 +15,9 @@ import com.ait.lienzo.client.core.shape.wires.WiresShape;
 import com.ait.lienzo.client.core.shape.wires.handlers.WiresConnectorControl;
 import com.ait.lienzo.client.core.types.Point2DArray;
 import com.ait.lienzo.shared.core.types.ColorName;
-import com.google.gwt.user.client.ui.FlowPanel;
 import com.google.gwt.user.client.ui.Panel;
 
-public class AutoMagnetsConnectorsTests extends FlowPanel implements MyLienzoTest,
+public class AutoMagnetsConnectorsTests extends MyLienzoTest implements
                                                                      HasMediators,
                                                                      HasButtons {
 
@@ -165,10 +164,5 @@ public class AutoMagnetsConnectorsTests extends FlowPanel implements MyLienzoTes
         final OrthogonalPolyLine line = new OrthogonalPolyLine(Point2DArray.fromArrayOfDouble(points)).setCornerRadius(5).setDraggable(true);
         layer.add(line);
         return line;
-    }
-
-    @Override
-    public int compareTo(MyLienzoTest other) {
-        return this.getClass().getSimpleName().compareTo(other.getClass().getSimpleName());
     }
 }

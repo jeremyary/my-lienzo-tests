@@ -1,10 +1,13 @@
 package org.roger600.lienzo.client;
 
-import com.ait.lienzo.client.core.shape.*;
+import com.ait.lienzo.client.core.shape.Circle;
+import com.ait.lienzo.client.core.shape.Group;
+import com.ait.lienzo.client.core.shape.Layer;
+import com.ait.lienzo.client.core.shape.Rectangle;
+import com.ait.lienzo.client.core.shape.SVGPath;
 import com.ait.lienzo.shared.core.types.ColorName;
-import com.google.gwt.user.client.ui.FlowPanel;
 
-public class BPMNIconsTests extends FlowPanel implements MyLienzoTest {
+public class BPMNIconsTests extends MyLienzoTest {
 
     private static final String BLACK = ColorName.BLACK.getColorString();
 
@@ -217,10 +220,4 @@ public class BPMNIconsTests extends FlowPanel implements MyLienzoTest {
         return new SVGPath(path)
                 .setDraggable(false);
     }
-
-    @Override
-    public int compareTo(MyLienzoTest other) {
-        return this.getClass().getSimpleName().compareTo(other.getClass().getSimpleName());
-    }
-
 }

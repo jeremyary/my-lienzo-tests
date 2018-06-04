@@ -9,20 +9,18 @@ import com.ait.lienzo.client.core.types.Point2D;
 import com.google.gwt.event.dom.client.ClickEvent;
 import com.google.gwt.event.dom.client.ClickHandler;
 import com.google.gwt.user.client.ui.Button;
-import com.google.gwt.user.client.ui.FlowPanel;
 import com.google.gwt.user.client.ui.Panel;
 import org.roger600.lienzo.client.HasButtons;
 import org.roger600.lienzo.client.MyLienzoTest;
 import org.roger600.lienzo.client.TestsUtils;
 import org.roger600.lienzo.client.casemodeller.control.CaseModellerControlFactory;
 
-public class CaseModellerContainmentTests extends FlowPanel implements MyLienzoTest,
-                                                                       HasButtons {
+public class CaseModellerContainmentTests extends MyLienzoTest implements HasButtons {
 
     private Layer layer;
     private WiresManager wires_manager;
 
-    public void test( Layer layer ) {
+    public void test(Layer layer ) {
         this.layer = layer;
         this.wires_manager = WiresManager.get( layer );
         this.wires_manager.setWiresControlFactory( new CaseModellerControlFactory() );
@@ -83,10 +81,5 @@ public class CaseModellerContainmentTests extends FlowPanel implements MyLienzoT
         label.setFontSize( 8.0 );
         label.setY( 10.0 );
         return label;
-    }
-
-    @Override
-    public int compareTo(MyLienzoTest other) {
-        return this.getClass().getSimpleName().compareTo(other.getClass().getSimpleName());
     }
 }
